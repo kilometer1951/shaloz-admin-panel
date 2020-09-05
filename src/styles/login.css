@@ -1,0 +1,8 @@
+.auth-container {
+  margin: auto;
+  width: 50%;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+  padding: 50px;
+  margin-top: 10%;
+  border-radius: 5px;
+}
