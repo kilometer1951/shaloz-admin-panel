@@ -14,7 +14,8 @@ export default ({ children }, props) => {
             display: "flex",
             flexDirection: "row",
             justifyContent: "space-between",
-          }}>
+          }}
+        >
           <div>
             <ul>
               <a href="/admin/all_users" style={{ marginRight: 20 }}>
@@ -38,6 +39,9 @@ export default ({ children }, props) => {
               <a href="/admin/all_products" style={{ marginRight: 20 }}>
                 All Products
               </a>
+              <a href="/admin/approve_product" style={{ marginRight: 20 }}>
+                Approve products
+              </a>
             </ul>
           </div>
           <div>
@@ -46,8 +50,9 @@ export default ({ children }, props) => {
               style={{ marginRight: 20 }}
               onClick={() => {
                 localStorage.clear();
-                window.location.href="/"
-              }}>
+                window.location.href = "/";
+              }}
+            >
               Log out
             </a>
           </div>

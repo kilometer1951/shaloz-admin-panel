@@ -97,7 +97,8 @@ const CancelOrders = () => {
             paddingLeft: 10,
             paddingRight: 10,
           }}
-          key={index}>
+          key={index}
+        >
           <p>
             {result.name}: {result.content} (+${result.price})
           </p>
@@ -111,7 +112,8 @@ const CancelOrders = () => {
       return (
         <div style={styles.itemsCard} key={index}>
           <div
-            style={{ overflow: "auto", overflowY: "hidden", display: "flex" }}>
+            style={{ overflow: "auto", overflowY: "hidden", display: "flex" }}
+          >
             {displayVariants(result.selected_variant_value)}
           </div>
           <div
@@ -122,9 +124,11 @@ const CancelOrders = () => {
               flexDirection: "row",
               borderBottomColor: "#9e9e9e",
               borderBottomWidth: 0.5,
-            }}>
+            }}
+          >
             <div
-              style={{ width: "80%", flexDirection: "row", display: "flex" }}>
+              style={{ width: "80%", flexDirection: "row", display: "flex" }}
+            >
               <div style={{ width: "30%" }}>
                 <img
                   src={result.product.main_image}
@@ -144,7 +148,8 @@ const CancelOrders = () => {
                     marginTop: 5,
                     borderRadius: 20,
                     width: 155,
-                  }}>
+                  }}
+                >
                   <p style={{}}>Qty bought : {result.qty}</p>
                 </div>
               </div>
@@ -154,7 +159,8 @@ const CancelOrders = () => {
                 style={{
                   fontSize: 18,
                   alignSelf: "flex-end",
-                }}>
+                }}
+              >
                 ${parseFloat(result.price).toFixed(2)}
               </p>
             </div>
@@ -175,14 +181,16 @@ const CancelOrders = () => {
           paddingBottom: 20,
           boxShadow: "0 8px 16px 0 rgba(0, 0, 0, 0.2)",
         }}
-        key={index}>
+        key={index}
+      >
         <div
           style={{
             flexDirection: "row",
             display: "flex",
             justifyContent: "space-between",
             marginBottom: 10,
-          }}>
+          }}
+        >
           <div>
             <p style={{ fontSize: 20 }}>Bought by</p>
             <p style={{ fontSize: 16 }}>
@@ -200,14 +208,16 @@ const CancelOrders = () => {
           style={{
             fontSize: 15,
             marginBottom: 10,
-          }}>
+          }}
+        >
           Date Shipped: Not Shipped
         </p>
         <p
           style={{
             fontSize: 15,
             marginBottom: 10,
-          }}>
+          }}
+        >
           Tracking number: No number to provide
         </p>
         <p style={{ color: "red" }}>
@@ -222,12 +232,14 @@ const CancelOrders = () => {
             borderTopWidth: 0.4,
             marginTop: 15,
             borderTopColor: "#9e9e9e",
-          }}>
+          }}
+        >
           <p
             style={{
               fontSize: 18,
               marginTop: 10,
-            }}>
+            }}
+          >
             Order Details
           </p>
 
@@ -237,19 +249,22 @@ const CancelOrders = () => {
               flexDirection: "row",
               justifyContent: "space-between",
               marginBottom: 10,
-            }}>
+            }}
+          >
             <p
               style={{
                 fontSize: 15,
                 marginTop: 10,
-              }}>
+              }}
+            >
               Shipping total (estimated from usps)
             </p>
             <p
               style={{
                 fontSize: 15,
                 marginTop: 10,
-              }}>
+              }}
+            >
               ${item.shippment_price}
             </p>
           </div>
@@ -260,19 +275,22 @@ const CancelOrders = () => {
               flexDirection: "row",
               justifyContent: "space-between",
               marginBottom: 10,
-            }}>
+            }}
+          >
             <p
               style={{
                 fontSize: 15,
                 marginTop: 10,
-              }}>
+              }}
+            >
               Processing fee
             </p>
             <p
               style={{
                 fontSize: 15,
                 marginTop: 10,
-              }}>
+              }}
+            >
               ${item.processing_fee}
             </p>
           </div>
@@ -284,19 +302,22 @@ const CancelOrders = () => {
                 flexDirection: "row",
                 justifyContent: "space-between",
                 marginBottom: 10,
-              }}>
+              }}
+            >
               <p
                 style={{
                   fontSize: 15,
                   marginTop: 10,
-                }}>
+                }}
+              >
                 Discount
               </p>
               <p
                 style={{
                   fontSize: 15,
                   marginTop: 10,
-                }}>
+                }}
+              >
                 -${item.discount_applied}
               </p>
             </div>
@@ -308,19 +329,22 @@ const CancelOrders = () => {
               flexDirection: "row",
               justifyContent: "space-between",
               marginBottom: 10,
-            }}>
+            }}
+          >
             <p
               style={{
                 fontSize: 15,
                 marginTop: 10,
-              }}>
+              }}
+            >
               Shaloz takes
             </p>
             <p
               style={{
                 fontSize: 15,
                 marginTop: 10,
-              }}>
+              }}
+            >
               ${item.theshop_takes}
             </p>
           </div>
@@ -330,19 +354,22 @@ const CancelOrders = () => {
               flexDirection: "row",
               justifyContent: "space-between",
               marginBottom: 10,
-            }}>
+            }}
+          >
             <p
               style={{
                 fontSize: 15,
                 marginTop: 10,
-              }}>
+              }}
+            >
               Tax
             </p>
             <p
               style={{
                 fontSize: 15,
                 marginTop: 10,
-              }}>
+              }}
+            >
               ${item.tax}
             </p>
           </div>
@@ -352,14 +379,16 @@ const CancelOrders = () => {
               style={{
                 fontSize: 17,
                 marginTop: 10,
-              }}>
+              }}
+            >
               Shipping details
             </p>
             <p
               style={{
                 fontSize: 20,
                 marginTop: 10,
-              }}>
+              }}
+            >
               {item.shipping_details}, United States
             </p>
           </div>
@@ -371,19 +400,22 @@ const CancelOrders = () => {
               display: "flex",
               flexDirection: "row",
               justifyContent: "space-between",
-            }}>
+            }}
+          >
             <p
               style={{
                 fontSize: 20,
                 marginTop: 10,
-              }}>
+              }}
+            >
               Order total ({item.items.length} item(s)):
             </p>
             <p
               style={{
                 fontSize: 18,
                 marginTop: 10,
-              }}>
+              }}
+            >
               ${parseFloat(item.total).toFixed(2)}
             </p>
           </div>
@@ -397,7 +429,8 @@ const CancelOrders = () => {
                 parseFloat(item.processing_fee) -
                 parseFloat(item.tax)
               ).toFixed(2)
-            )}>
+            )}
+          >
             <div
               style={{
                 width: "50%",
@@ -407,13 +440,15 @@ const CancelOrders = () => {
                 marginTop: 50,
                 borderRadius: 5,
                 cursor: "pointer",
-              }}>
+              }}
+            >
               <p
                 style={{
                   fontSize: 18,
                   color: "#fff",
                   textAlign: "center",
-                }}>
+                }}
+              >
                 Cancel Order, Return
                 {item.user.first_name + " " + item.user.last_name} $
                 {(
@@ -430,22 +465,23 @@ const CancelOrders = () => {
   });
 
   let view;
-  if (data.length === 0) {
-    view = (
-      <div style={{ textAlign: "center", marginTop: "10%", padding: 25 }}>
-        <p
-          style={{
-            fontSize: 20,
-            pAlign: "center",
-            padding: 20,
-          }}>
-          No data to show
-        </p>
-      </div>
-    );
-  } else {
-    view = renderItem;
-  }
+  //if (data.length === 0) {
+  view = (
+    <div style={{ textAlign: "center", marginTop: "10%", padding: 25 }}>
+      <p
+        style={{
+          fontSize: 20,
+          pAlign: "center",
+          padding: 20,
+        }}
+      >
+        No data to show still working on feature
+      </p>
+    </div>
+  );
+  // } else {
+  //   view = renderItem;
+  // }
 
   return (
     <div style={{ padding: 20 }}>
@@ -469,7 +505,8 @@ const CancelOrders = () => {
             display: "flex",
             justifyContent: "center",
             marginTop: 200,
-          }}>
+          }}
+        >
           <Spinner size={40} color="#000" />
         </div>
       ) : (
