@@ -117,6 +117,14 @@ export const approveProduct = async (product_id) => {
   return;
 };
 
+export const paymentVerificationMessage = async (seller_id) => {
+  const response = await fetch(
+    `${URL}/api/admin/payment_verification_message/${seller_id}`
+  );
+  const resData = await response.json();
+  return resData;
+};
+
 export const searchOrder = async (orderId) => {
   const response = await fetch(`${URL}/api/admin/search_by_orderId/${orderId}`);
   const resData = await response.json();

@@ -73,10 +73,11 @@ const PaySellers = () => {
           setIsLoading(false);
           if (!response.status) {
             setIsLoading(false);
+            actions.paymentVerificationMessage(cart.seller._id);
             alert(
               "Error paying this seller. Seller has failed verification. A message has been sent to the seller with regard to this issue. After they verify their account, you can proceed to payment"
             );
-            window.location.reload();
+            //   window.location.reload();
             return;
           }
           window.location.reload();
