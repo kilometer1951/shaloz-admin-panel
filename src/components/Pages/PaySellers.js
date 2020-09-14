@@ -146,11 +146,12 @@ const PaySellers = () => {
     let total = 0.0;
     for (let i = 0; i < cart.items.length; i++) {
       let price =
-        parseFloat(cart.items[i].price) +
+        (parseFloat(cart.items[i].price) +
+          parseFloat(calculateVariant(cart.items[i].selected_variant_value))) *
+          parseInt(cart.items[i].qty) +
         parseFloat(
           cart.items[i].discount !== "" ? cart.items[i].discount : 0.0
-        ) +
-        parseFloat(calculateVariant(cart.items[i].selected_variant_value));
+        );
 
       //  console.log(price);
 
